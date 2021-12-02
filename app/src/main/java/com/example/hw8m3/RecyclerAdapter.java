@@ -13,6 +13,10 @@ import java.util.ArrayList;
 public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder>{
     private ArrayList<ItemModel> list = new ArrayList<>();
 
+    public RecyclerAdapter(ArrayList<ItemModel> list) {
+        this.list = list;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -14,8 +14,11 @@ import android.view.ViewGroup;
 
 import com.example.hw8m3.databinding.FragmentMainBinding;
 
+import java.util.ArrayList;
+
 public class MainFragment extends Fragment {
     private FragmentMainBinding binding;
+    private RecyclerAdapter recyclerAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,12 +31,16 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        createItems();
+        binding.recycler.setAdapter(recyclerAdapter);
+    }
 
-        /*binding.btnTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment2());
-            }
-        });*/
+    private void createItems() {
+        ArrayList<ItemModel> list = new ArrayList<>();
+        list.add(new ItemModel(R.drawable.img_rick, "Alive", "Rick Sanchez"));
+        list.add(new ItemModel(R.drawable.img_morty, "Alive", "Morty Smith"));
+        list.add(new ItemModel(R.drawable.img_albert, "Dead", "Albert Einstein"));
+        list.add(new ItemModel(R.drawable.img_jerry, "Alive", "Jerry Smith"));
+        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(list);
     }
 }
