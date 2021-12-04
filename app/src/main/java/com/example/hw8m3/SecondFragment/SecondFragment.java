@@ -1,5 +1,6 @@
 package com.example.hw8m3.SecondFragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.hw8m3.Activities.SecondActivity;
+import com.example.hw8m3.IOnClick;
 import com.example.hw8m3.databinding.FragmentSecondBinding;
 
 import java.util.ArrayList;
@@ -56,7 +59,14 @@ public class SecondFragment extends Fragment {
         list.add(new SecondItemModel("Planet", "Gromflom Prime"));
         list.add(new SecondItemModel("Planet", "Earth (Rpl. Dimension)"));
 
-        secondRecyclerAdapter = new SecondRecyclerAdapter(list);
+        secondRecyclerAdapter = new SecondRecyclerAdapter(list, new IOnClick() {
+            @Override
+            public void onClick(int pos) {
+                Intent intent = new Intent(getActivity(), SecondActivity.class);
+                intent.putExtra("F_CHANGER", "sel1");
+                startActivity(intent);
+            }
+        });
         binding.secondRecycler.setAdapter(secondRecyclerAdapter);
         binding.secondRecycler.setHasFixedSize(true);
         binding.secondRecycler.setLayoutManager(new GridLayoutManager(getContext(),2));

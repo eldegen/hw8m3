@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,6 +49,7 @@ public class MainFragment extends Fragment {
             public void onClick(int pos) {
                 Log.d("eldeg", "click");
                 Intent intent = new Intent(getActivity(), SecondActivity.class);
+                intent.putExtra("F_CHANGER", "sel2");
                 startActivity(intent);
             }
         });
