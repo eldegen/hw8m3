@@ -1,5 +1,6 @@
 package com.example.hw8m3;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,6 +15,13 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     public ViewHolder(@NonNull ItemRecyclerBinding itemView) {
         super(itemView.getRoot());
         binding = itemView;
+
+        binding.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("pizza", "on click");
+            }
+        });
     }
 
     public void onBind(ItemModel model) {

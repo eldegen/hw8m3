@@ -32,7 +32,6 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         createItems();
-        binding.recycler.setAdapter(recyclerAdapter);
     }
 
     private void createItems() {
@@ -42,5 +41,6 @@ public class MainFragment extends Fragment {
         list.add(new ItemModel(R.drawable.img_albert, "Dead", "Albert Einstein"));
         list.add(new ItemModel(R.drawable.img_jerry, "Alive", "Jerry Smith"));
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(list);
+        binding.recycler.setAdapter(recyclerAdapter);
     }
 }
