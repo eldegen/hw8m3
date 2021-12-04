@@ -15,16 +15,18 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder>{
     private ArrayList<ItemModel> list = new ArrayList<>();
+    private IOnClick listener;
 
-    public RecyclerAdapter(ArrayList<ItemModel> list) {
+    public RecyclerAdapter(ArrayList<ItemModel> list, IOnClick listener) {
         this.list = list;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemRecyclerBinding binding = ItemRecyclerBinding.inflate(LayoutInflater.from(parent.getContext()));
-        return new ViewHolder(binding);
+        return new ViewHolder(binding, listener);
     }
 
     @Override

@@ -11,6 +11,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.hw8m3.databinding.FragmentMainBinding;
 
@@ -40,7 +41,12 @@ public class MainFragment extends Fragment {
         list.add(new ItemModel(R.drawable.img_morty, "Alive", "Morty Smith"));
         list.add(new ItemModel(R.drawable.img_albert, "Dead", "Albert Einstein"));
         list.add(new ItemModel(R.drawable.img_jerry, "Alive", "Jerry Smith"));
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(list);
+        recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
+            @Override
+            public void onClick(int pos) {
+                Toast.makeText(getActivity(), "dadsa", Toast.LENGTH_SHORT).show();
+            }
+        });
         binding.recycler.setAdapter(recyclerAdapter);
     }
 }

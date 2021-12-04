@@ -11,14 +11,17 @@ import com.example.hw8m3.databinding.ItemRecyclerBinding;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     private ItemRecyclerBinding binding;
+    private IOnClick iOnClick;
 
-    public ViewHolder(@NonNull ItemRecyclerBinding itemView) {
+    public ViewHolder(@NonNull ItemRecyclerBinding itemView, IOnClick listener) {
         super(itemView.getRoot());
         binding = itemView;
+        iOnClick = listener;
 
         binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                iOnClick.onClick(getAdapterPosition());
                 Log.d("pizza", "on click");
             }
         });
