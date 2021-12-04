@@ -42,11 +42,18 @@ public class MainFragment extends Fragment {
         list.add(new ItemModel(R.drawable.img_morty, "Alive", "Morty Smith"));
         list.add(new ItemModel(R.drawable.img_albert, "Dead", "Albert Einstein"));
         list.add(new ItemModel(R.drawable.img_jerry, "Alive", "Jerry Smith"));
-        recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
+        /*recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
             @Override
             public void onClick(int pos) {
                 Log.e("eldeg", "click");
                 NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment());
+            }
+        });*/
+
+        recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
+            @Override
+            public void onClick(int pos) {
+//                NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment());
             }
         });
         binding.recycler.setAdapter(recyclerAdapter);
