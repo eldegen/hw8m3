@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavGraph;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,8 @@ public class MainFragment extends Fragment {
         recyclerAdapter = new RecyclerAdapter(list, new IOnClick() {
             @Override
             public void onClick(int pos) {
-                Toast.makeText(getActivity(), "dadsa", Toast.LENGTH_SHORT).show();
+                Log.e("eldeg", "click");
+                NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment2());
             }
         });
         binding.recycler.setAdapter(recyclerAdapter);
