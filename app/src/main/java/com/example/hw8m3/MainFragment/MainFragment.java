@@ -1,19 +1,20 @@
-package com.example.hw8m3;
+package com.example.hw8m3.MainFragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavGraph;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.example.hw8m3.IOnClick;
+import com.example.hw8m3.R;
+import com.example.hw8m3.SecondActivity;
 import com.example.hw8m3.databinding.FragmentMainBinding;
 
 import java.util.ArrayList;
@@ -46,7 +47,8 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(int pos) {
                 Log.d("eldeg", "click");
-//                NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment());
+                Intent intent = new Intent(getActivity(), SecondActivity.class);
+                startActivity(intent);
             }
         });
         binding.recycler.setAdapter(recyclerAdapter);

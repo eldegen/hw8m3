@@ -6,6 +6,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.hw8m3.databinding.ActivityMainBinding;
@@ -21,5 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(binding.navBottom1, navController);
+
+
     }
 }

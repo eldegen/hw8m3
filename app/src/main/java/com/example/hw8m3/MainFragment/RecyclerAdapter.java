@@ -1,14 +1,12 @@
-package com.example.hw8m3;
+package com.example.hw8m3.MainFragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hw8m3.IOnClick;
 import com.example.hw8m3.databinding.ItemRecyclerBinding;
 
 import java.util.ArrayList;

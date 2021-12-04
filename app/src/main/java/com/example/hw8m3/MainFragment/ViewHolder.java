@@ -1,12 +1,12 @@
-package com.example.hw8m3;
+package com.example.hw8m3.MainFragment;
 
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hw8m3.IOnClick;
 import com.example.hw8m3.databinding.ItemRecyclerBinding;
 
 public class ViewHolder extends RecyclerView.ViewHolder {

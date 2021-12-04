@@ -1,4 +1,4 @@
-package com.example.hw8m3;
+package com.example.hw8m3.MainFragment;
 
 public class ItemModel {
     private int personImage;
