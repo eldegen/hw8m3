@@ -46,7 +46,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(int pos) {
                 Log.e("eldeg", "click");
-                NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment());
+//                NavHostFragment.findNavController(MainFragment.this).navigate(MainFragmentDirections.actionMainFragmentToSecondFragment());
             }
         });
         binding.recycler.setAdapter(recyclerAdapter);
