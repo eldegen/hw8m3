@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.hw8m3.SecondFragment"
+        android:name="com.example.hw8m3.SecondFragment.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
 </navigation>

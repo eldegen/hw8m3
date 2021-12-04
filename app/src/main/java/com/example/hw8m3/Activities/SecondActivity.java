@@ -1,4 +1,4 @@
-package com.example.hw8m3;
+package com.example.hw8m3.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

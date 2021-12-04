@@ -1,4 +1,4 @@
-package com.example.hw8m3;
+package com.example.hw8m3.SecondFragment;
 
 public class SecondItemModel {
     private String location, name;

@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.hw8m3.IOnClick;
 import com.example.hw8m3.R;
-import com.example.hw8m3.SecondActivity;
+import com.example.hw8m3.Activities.SecondActivity;
 import com.example.hw8m3.databinding.FragmentMainBinding;
 
 import java.util.ArrayList;

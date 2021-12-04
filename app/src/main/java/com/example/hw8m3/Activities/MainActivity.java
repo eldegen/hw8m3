@@ -1,4 +1,4 @@
-package com.example.hw8m3;
+package com.example.hw8m3.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -9,6 +9,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.hw8m3.R;
 import com.example.hw8m3.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

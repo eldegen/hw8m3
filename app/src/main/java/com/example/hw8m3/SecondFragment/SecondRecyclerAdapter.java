@@ -1,4 +1,4 @@
-package com.example.hw8m3;
+package com.example.hw8m3.SecondFragment;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;

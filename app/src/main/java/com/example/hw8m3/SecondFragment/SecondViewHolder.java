@@ -1,11 +1,8 @@
-package com.example.hw8m3;
-
-import android.view.View;
+package com.example.hw8m3.SecondFragment;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hw8m3.databinding.ItemRecyclerBinding;
 import com.example.hw8m3.databinding.ItemSecondRecyclerBinding;
 
 public class SecondViewHolder extends RecyclerView.ViewHolder {
